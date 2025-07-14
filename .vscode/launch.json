@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev (logger enabled)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_dev.dart",
+      "args": [
+        "--dart-define=FLAVOR=dev"
+      ],
+      "flutterMode": "debug"
+    },
+    {
+      "name": "Prod (logger disabled)",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_prod.dart",
+      "args": [
+        "--dart-define=FLAVOR=prod"
+      ],
+      "flutterMode": "release"
+    },
+    {
+      "name": "Profile Mode",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main_profile.dart",
+      "args": [
+        "--dart-define=FLAVOR=profile"
+      ],
+      "flutterMode": "profile"
+    }
+  ]
+}

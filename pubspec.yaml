@@ -1,0 +1,47 @@
+name: portfolio_final
+description: "Flutter portfolio app"
+publish_to: 'none'
+version: 0.0.1+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  sizer: ^3.0.5
+  logger: ^2.6.0
+  cached_network_image: ^3.4.1
+  flutter_svg: ^2.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: TikTokSans
+      fonts:
+        - asset: assets/fonts/TikTokSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/TikTokSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/TikTokSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/TikTokSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/TikTokSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/TikTokSans-ExtraBold.ttf
+          weight: 900
+  assets:
+    - assets/images/
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
