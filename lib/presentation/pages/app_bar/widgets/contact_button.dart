@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_final/utils/extensions.dart';
-import 'package:sizer/sizer.dart';
+import 'package:portfolio_final/core/design/variants/component/button_token.dart';
+import 'package:portfolio_final/core/design/widgets/app_button.dart';
+import 'package:portfolio_final/utils/theme/theme_mode_notifier.dart';
+import 'package:provider/provider.dart';
 
 class ContactButton extends StatelessWidget {
   const ContactButton({
@@ -9,22 +11,10 @@ class ContactButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 13.sp,
-        vertical: 9.sp,
-      ),
-      decoration: BoxDecoration(
-        color: context.theme.palette.black,
-        borderRadius: BorderRadius.circular(100),
-      ),
-      child: Text(
-        'Contact',
-        style: TextStyle(
-          fontSize: 11.sp,
-          color: context.theme.palette.white,
-        ),
-      ),
+    return AppButton(
+      label: 'Contact',
+      type: ButtonType.pill,
+      onPressed: () => context.read<ThemeModeNotifier>().toggleThemeMode(),
     );
   }
 }

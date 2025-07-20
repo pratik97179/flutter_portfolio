@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_final/main_dev.dart';
 import 'package:portfolio_final/presentation/pages/app_bar/widgets/contact_button.dart';
 import 'package:portfolio_final/presentation/pages/app_bar/widgets/name_widget.dart';
 import 'package:portfolio_final/presentation/pages/app_bar/widgets/routing_bar.dart';
-import 'package:portfolio_final/utils/logger.dart';
 import 'package:sizer/sizer.dart';
 
 class HeaderBar extends StatelessWidget {
@@ -36,19 +34,13 @@ class HeaderBar extends StatelessWidget {
           ),
           Positioned(
             left: 5.w,
-            top: 2.h,
+            bottom: 1.h,
             child: const NameWidget(),
           ),
           Positioned(
             right: 5.w,
-            top: 1.h,
-            child: GestureDetector(
-              onTap: () {
-                AppLogger.log('object');
-                themeModeNotifier.toggle();
-              },
-              child: const ContactButton(),
-            ),
+            top: 1.5.h,
+            child: const ContactButton(),
           ),
         ],
       ),

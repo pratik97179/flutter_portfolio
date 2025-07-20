@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_final/utils/extensions.dart';
-import 'package:portfolio_final/presentation/widgets/text_with_hover_effect.dart';
+import 'package:portfolio_final/core/design/design_system.dart';
 import 'package:sizer/sizer.dart';
 
 class RoutingBar extends StatelessWidget {
@@ -20,6 +19,8 @@ class RoutingBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = context.palette.designColors;
+
     return AnimatedContainer(
       duration: const Duration(milliseconds: 150),
       padding: EdgeInsets.symmetric(
@@ -29,10 +30,10 @@ class RoutingBar extends StatelessWidget {
       margin: EdgeInsets.only(top: outerSpacing),
       width: _isScrolled ? 100.w : null,
       decoration: BoxDecoration(
-        color: context.theme.palette.surfaceLight,
+        color: palette.resolve(ColorRole.surfaceLight),
         borderRadius: BorderRadius.circular(_isScrolled ? 0 : 100),
         border: Border.all(
-          color: const Color.fromARGB(255, 196, 196, 196),
+          color: palette.resolve(ColorRole.border),
           width: 2.sp,
         ),
       ),
@@ -43,14 +44,13 @@ class RoutingBar extends StatelessWidget {
           return Container(
             width: 5.w,
             alignment: Alignment.center,
-            child: TextWithHoverEffect(
+            child: AppText(
               _items[index],
-              style: TextStyle(
-                fontSize: 11.sp,
-                color: context.theme.palette.textGreyLight,
-              ),
-              hoverColor: context.theme.palette.black,
-              hoverFontWeight: FontWeight.bold,
+              token: TextToken.body2,
+              hoverColorRole: ColorRole.text,
+              hoverFontWeight: FontWeight.w500,
+              allowHover: true,
+              onTap: () {},
             ),
           );
         }),
