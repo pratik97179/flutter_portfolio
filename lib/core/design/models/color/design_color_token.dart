@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../design_system.dart';
+import 'package:portfolio_final/core/design/design_system.dart';
 
 class DesignColors {
   final Map<ColorRole, Map<InteractionState, Color>> roleMap;
