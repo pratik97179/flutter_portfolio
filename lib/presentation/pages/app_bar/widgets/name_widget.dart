@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_final/utils/extensions.dart';
-import 'package:sizer/sizer.dart';
+import 'package:portfolio_final/core/design/variants/font/text_token.dart';
+import 'package:portfolio_final/core/design/widgets/app_text.dart';
 
 class NameWidget extends StatelessWidget {
-  const NameWidget({
-    super.key,
-  });
+  const NameWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return AppText(
       'PRATIK',
-      style: TextStyle(
-        fontSize: 13.sp,
-        color: context.theme.palette.black,
-        fontWeight: FontWeight.w300,
-      ),
+      token: TextToken.name,
+      onTap: () {},
     );
   }
 }

@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders:
+      portfolio_final|auto_string_builder:
+        generate_for:
+          - lib/core/constants/**.dart
+
+builders:
+  auto_string_builder:
+    import: "package:portfolio_final/builder/auto_string_builder.dart"
+    builder_factories: ["autoStringBuilder"]
+    build_extensions:
+      ".dart": [".g.dart"]
+    auto_apply: dependents
+    build_to: source
+    # applies_builders: ["source_gen|combining_builder"]

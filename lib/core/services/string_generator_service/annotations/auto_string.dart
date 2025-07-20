@@ -1,0 +1,3 @@
+class AutoString {
+  const AutoString();
+}
